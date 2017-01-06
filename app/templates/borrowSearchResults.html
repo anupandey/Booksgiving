@@ -1,0 +1,81 @@
+<!-- /borrow/books/<str:search="book_name"> -->
+<!DOCTYPE html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/borrowbook_findlocation.css') }}" />
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/borrowLink" class="selected">Borrow A Book</a></li>
+        <li><a href="/donateLink">Donate A Book</a></li>
+        <li><a href="/partnerorganisations">Partner with us</a></li>
+      </ul>
+    </div>
+
+    <br>
+    {%if searchBooks%}
+    <!-- short description:placeholder– Basically, this attribute shows a text in a field until the field is focused upon, then it just hides the text.
+    required– This specifies that the current element is a required part of a form submission.  -->
+    {% for searchBook in searchBooks %}
+    <div class="item_final">
+      <h1>{{searchBook.title}} </h1>
+      <div class="product-info">
+        <div class="left">
+          <div class="image">
+            <img class="bookimage" src="http://pngimg.com/upload/book_PNG2116.png" alt="Bookpic">
+          </div>
+        </div>
+        <div class="right">
+          <div class="description">
+            <span> Author:</span> {{searchBook.author}}
+            <br></br>
+            <span>ISBN:</span> {{searchBook.book_id}}
+            <br></br>
+            <span>Description:</span> {{searchBook.description}}
+            <br></br>
+          </div>
+        </div>
+        <form>
+          <input id="zipcode" type="text" placeholder="Enter your Zip Code" required>
+          <input id="button-cart" class="button" type="button" value="Search Available Centers">
+        </form>
+      </div>
+    </div>
+    {%endfor%}
+
+    {%else%}
+
+  <h1>Book Not Found!</h1>
+      {%endif%}
+    </br>
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      Donate and borrow books
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="{{ url_for('static', filename='js/location.js')}}""></script>
+</body>
+
+</html>

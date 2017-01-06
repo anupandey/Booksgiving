@@ -1,0 +1,100 @@
+<!-- /home -->
+<!DOCTYPE html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}" />
+  <title>
+  Books in Centre
+  </title>
+</head>
+
+<body>
+
+<div id ="nopic"
+  <div id="main">
+
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1></a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+
+    <div class="navigationBar" id="navBar" >
+      <ul>
+        <li><a href = "{{url_for('homePage')}}">Home</a></li>
+        <li><a href = "{{url_for('about') }}">About</a></li>
+        <li><a href="addBorrowingDetails">Lend A Book</a></li>
+        <li><a href= "{{url_for('addBook', centre_id = centre_id )}}">Accept A Book</a></li>
+        <li><a href="showBooksInCentre"  class="selected" >Inventory</a></li>
+      <li><a href="showCentre" >My centre </a></li>
+        <li><a href="showCentres" >All centres</a></li>
+      </ul>
+    </div>
+
+
+
+<div id = "bookcontent">
+  <h1>
+
+    A book is a dream that you hold in your hand.
+
+    –Neil Gaiman
+
+  </h1>
+  <div id = "content">
+<h1>  The following donations have been made to your centre:</h1>
+
+<div class="table-responsive">
+				<table class="table table-bordered">
+           <thead class="colorheader">
+						<tr>
+							<th>Date</th>
+              <th>Donation id</th>
+							<th>ISBN</th>
+              <th>Book Name</th>
+            	<th>User </th>
+              <th>Number</th>
+
+
+						</tr>
+					</thead>
+					<tbody>
+            {% if donation_details %}
+
+            {% for donation_detail in donation_details %}
+						<tr>
+							<td>{{donation_detail.date}}</td>
+							<td>{{donation_detail.donation_id}}}</td>
+							<td>{{donation_detail.book_id}}</td>
+              	<td>{{donation_detail.book_id}}</td>
+							<td> {{donation_detail.user_id}}</td>
+      </tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+  </div>
+
+  {% else %}
+    <h1 class = "warning">
+      No books found in {{centre.name}}!
+    </h1>
+    {%endif%}
+</div>
+</div>
+
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      Donate and borrow books
+    </div></div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<form action= "{{url_for('editBook', centre_id = centre_id, book_id = book.book_id)}}" method = 'POST'>
+
+<p>Title:</p>
+<input type = 'text' size='30' name = 'title' placeholder = '{{book.title}}'>
+
+<p>Author:</p>
+<input type='text' size='100' name='author', placeholder="{{book.author}}">
+
+<p>Description:</p>
+<input type='text' size='200' name='description', placeholder="{{book.description}}">
+
+<p>Number of Books:</p>
+<input type='number' size='4' name='number', placeholder="{{book.number}}" min="0">
+
+<input type='submit' value='Submit'>
+</form>
+
+<a href= '{{url_for('showBooksInCentre', centre_id= book.centre_id)}}'>Cancel</a>
+</body>
+</html>

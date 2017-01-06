@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Add Donation Details</title>
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+
+</head>
+
+
+	<body>
+		<div class="navigationBar" id="navBar">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="addBorrowingDetails.html">Borrow A Book</a></li>
+				<li><a href="addDonationDetails.html" class="selected">Donate A Book</a></li>
+				<li><a href="showBooksInCentre.html">Inventory</a></li>
+				<li><a href="showCentre.html">My centre</a></li>
+				<li><a href="showCentres.html">All centres</a></li>
+			</ul>
+		</div>
+
+				<div id="donation_details" class = "prefilled_details">
+  <form action= "{{url_for('addBookNew2', centre_id = centre_id, book_id=book.book_id)}}" method = 'POST'>
+
+  <p>Title:</p>
+<p>
+<input type = 'text' size='50' name = 'title' placeholder = '{{book.title}}'>
+</p>
+</br>
+
+  <p>Author:</p>
+	<p>
+		<textarea id="description" name="description" value="description" rows="2" cols="50" placeholder="{{book.author}}" ></textarea>
+	</p>
+</br>
+
+  <p>Description:</p>
+	<p>
+		<textarea id="description" name="description" value="" rows="4" cols="50" placeholder="{{book.description}}" ></textarea>
+	</p>
+</br>
+
+  <p>Number of Books you want to add:</p>
+  <p>
+		<input type='number' size='4' name='number' min="0">
+	</p>
+</br>
+</br>
+<p>
+	Details of Donor:
+</p>
+</br>
+<p>
+	<label for="donorname"> Name</label>
+</p>
+<p>
+	<input type="text" name="donorname" id="donorname" value="" size="50" onBlur="if(this.value=='')this.value='Enter Donor Name Here'" onFocus="if(this.value=='Enter Donor Name Here')this.value=''" required>
+</p>
+</br>
+<p>
+	<label for="email">E-mail address</label>
+</p>
+
+<p>
+	<input type="email" id="email" name="email-address" size="50" placeholder="mail@address.com" required>
+</p>
+</br>
+</br>
+<p>
+	<input type='submit' value='Submit'>
+</p>
+  </form>
+
+</div>
+  <!-- {% if addbook %}
+  {{addbook.title}}
+ {{addbook.author}}
+  {{addbook.description}}
+  {{addbook.number}}
+  {{addbook.book_id}}
+
+  {% else %}
+  Book not present
+  {%endif%} -->
+
+</body>
+</html>

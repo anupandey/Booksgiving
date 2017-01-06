@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+  {% block css %}{% endblock %}
+</head>
+
+<body>
+  <div id="grey_page">
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="{{url_for('homePage') }}">Home</a></li>
+        <li><a href="{{url_for('about') }}">About</a></li>
+        <li><a href="/addBorrowingDetails">Lend A Book</a></li>
+        <li><a href="/addDonationDetails">Accept A Book</a></li>
+        <li><a href="/showBooksInCentre">Inventory</a></li>
+        <li><a href="/showCentre" class="selected">My centre </a></li>
+        <li><a href="/showCentres">All centres</a></li>
+      </ul>
+    </div>
+    <div id="flash_messages">
+      {% with messages = get_flashed_messages()%} {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li> <strong> {{message}}</strong></li>
+        {% endfor%}
+      </ul>
+      {% endif %} {% endwith %}
+
+    </div>
+
+    <div class="onecentre">
+      <div class="heading">
+        <a href='{{url_for(' showBooksInCentre ', centre_id = centre.centre_id) }}'>
+          <h1> {{centre.name}} </h1></a>
+
+      </div>
+
+      </br>
+      <p> <img src="{{ url_for('static', filename='images/contact.png') }}" />Contact Person : {{centre.contactname}}</p>
+      <p> <img src="{{ url_for('static', filename='images/phone.png') }}" /> Phone Number : {{centre.phone}} </p>
+      <p> <img src="{{ url_for('static', filename='images/email.png') }}" /> E-mail address : {{centre.email_address}}</p>
+      <p><img src="{{ url_for('static', filename='images/address.png') }}" /> Address : {{centre.address}}, Pincode - {{centre.pincode}}</p>
+
+      </br>
+      <a href='{{url_for(' editCentre ', centre_id = centre.centre_id) }}'>Edit</a>
+      </br>
+      <a href='{{url_for(' deleteCentre ', centre_id = centre.centre_id) }}'>Delete</a>
+    </div>
+
+    <div id="footer">
+      <a href="{{url_for('homePage') }}">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      You were born with the ability to change someone's life
+      <br>Don't WASTE it!
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

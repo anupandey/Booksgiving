@@ -1,0 +1,131 @@
+<!-- /home -->
+<!DOCTYPE html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}" />
+  <title>
+  Books in Centre
+  </title>
+</head>
+
+<body>
+
+<div id ="nopic"
+  <div id="main">
+
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1></a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+
+    <div class="navigationBar" id="navBar" >
+      <ul>
+        <li><a href = "{{url_for('homePage')}}">Home</a></li>
+        <li><a href = "{{url_for('about') }}">About</a></li>
+        <li><a href="addBorrowingDetails">Lend A Book</a></li>
+        <li><a href= "{{url_for('addBookNew', centre_id = centre.centre_id) }}">Accept A Book</a></li>
+        <li><a href="showBooksInCentre"  class="selected" >Inventory</a></li>
+      <li><a href="showCentre" >My centre </a></li>
+        <li><a href="showCentres" >All centres</a></li>
+      </ul>
+    </div>
+
+    <div id = "flash_messages" >
+  {% with messages = get_flashed_messages()%}
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li> <strong> {{message}}</strong></li>
+      {% endfor%}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    </div>
+
+
+<div id = "bookcontent">
+
+  <form id="isbn-search" action="" method='POST'>
+  <input type="text" placeholder="Enter your Book ISBN ID Here"size='30' name = 'book_id'>
+  <input type="submit" value="Search in Inventory">
+  </form>
+  <div id = "content">
+<h1>  You have the following books in your centre:</h1>
+
+<div class="table-responsive">
+				<table class="table table-bordered">
+           <thead class="colorheader">
+						<tr>
+							<th>Book Name</th>
+							<th>ISBN-10</th>
+							<th>ISBN-13</th>
+              <th>Author</th>
+            	<th>Number</th>
+              <th>Edit</th>
+              <th>Delete</th>
+
+						</tr>
+					</thead>
+					<tbody>
+            {% if books %}
+
+            {% for book in books %}
+						<tr>
+							<td>{{book.title}}</td>
+							<td>{{book.book_id}}</td>
+							<td>{{book.book_id}}</td>
+							<td> {{book.author}}</td>
+              	<td> {{book.number}}</td>
+                	<td> <a  href='{{url_for('editBook', centre_id = centre.centre_id, book_id = book.book_id) }}'>Edit</a></td>
+                  	<td>   <a href = '{{url_for('deleteBook', centre_id = centre.centre_id, book_id = book.book_id ) }}'>Delete</a>
+</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+
+				</table>
+
+			</div>
+    </br>
+      <div class = "addbook-button">
+        <a href='{{url_for('addBookNew', centre_id = centre.centre_id) }}'>Click to add Book</a>
+      </br>
+
+    </br>
+      </div>
+  </div>
+
+  {% else %}
+    <h1 class = "warning">
+      No books found in {{centre.name}}!
+    </h1>
+    {%endif%}
+  </br>
+
+  <h1>
+    A book is a gift you can open again and again </br></br>
+    Lets share the joy of reading!
+  </h1>
+  </br>
+
+</br>
+</div>
+</div>
+
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      Donate and borrow books
+    </div></div>
+</body>
+
+</html>

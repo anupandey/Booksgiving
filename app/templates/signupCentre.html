@@ -1,0 +1,75 @@
+<!-- /centre/signup  -->
+
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title> Signup for new centres</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	  <link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+	</head>
+
+
+<body>
+
+<a href="{{url_for('homePage')}}"> <button class= "homelink"> Cancel </button> </a>
+
+	<div id="login">
+
+		<h2><span class="fontawesome-lock"></span>Sign Up </h2>
+
+		<form action="{{url_for('newCentre')}}" method = 'POST'>
+
+			<fieldset>
+<p> <label for ="name">Name of the Organisation</label> </p>
+<p><input type="text" name="name" id="organisationname" value="" onBlur="if(this.value=='')this.value='Enter Your Organisation Name Here'" onFocus="if(this.value=='Enter Your Organisation Name Here')this.value=''" required></p>
+
+<p> <label for ="address">Address of the Organisation</label> </p>
+<p> <textarea id="address" name="address" rows="5" required value="" onBlur="if(this.value=='')this.value='Enter Your Organisation Address Here'" onFocus="if(this.value=='Enter Your Organisation Address Here')this.value=''"></textarea>  </p> <!-- JS because of IE support; better: placeholder="mail@address.com" -->
+<p> <label for="pincode">Pin code</label></p>
+<p> <input id="postcode" name="pincode" type="number" required value="110001"></p>
+
+<p>
+	<label for="phone">Phone</label></p>
+	<p>	<input id="phone" name="phone" type="tel" placeholder="Eg. 01122116269" required></p>
+
+	<p> <label for ="details">Help Us Know You Better</label> </p>
+	<p> <textarea id="Details" type="text" name="about" rows="5" required value="" placeholder ="Please Enter a  Short Synopsis of Your Organisation" ></textarea>  </p>
+
+	<p> <label for="id">Registration Number</label></p>
+	<p> <input id="registration" name="centre_id" type="text" required value="" onBlur="if(this.value=='')this.value='Enter Organisations Registration No.'" onFocus="if(this.value=='Enter Organisations Registration No.')this.value=''"></p>
+
+	<p><label for="contactname">Contact Name</label></p>
+	<p><input type="text" id="username" name="contactname" required value="" onBlur="if(this.value=='')this.value='Please Enter a Contact name!'" onFocus="if(this.value=='Please Enter a Contact name!')this.value=''"></p>
+
+	<p><label for="email_address">E-mail address</label></p>
+	<p><input type="email" id="email" name="email_address" placeholder="mail@address.com" required></p>
+
+	<p><label for="password">Password</label></p>
+	<p><input type="password" name="password" id="password" value="password" onBlur="if(this.value=='')this.value='password'" onFocus="if(this.value=='password')this.value=''"></p> <!-- JS because of IE support; better: placeholder="password" -->
+
+	<p><input type="submit" value="Sign In"></p>
+
+
+			</fieldset>
+		</form>
+
+	<div id="footer">
+		<a href="{{url_for('homePage')}}">
+			<h1>Happy Booksgiving! </h1>
+		</a>
+</div>
+<div id="tag">
+	You were born with the ability to change someone's life
+	<br>Don't WASTE it!
+</div>
+</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/organisation_signup.js"></script>
+	</body>
+
+</html>

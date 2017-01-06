@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../css/borrowbook_findlocation.css">
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+  <div id="main">
+    <div id="greypage">
+    <div id="header">
+      <a href="home.html">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="borrow.html" class="selected">Borrow A Book</a></li>
+        <li><a href="donate.html">Donate A Book</a></li>
+        <li><a href="partnerorganisations.html">Partner with us</a></li>
+      </ul>
+    </div>
+
+    <br>
+    <div id="findInCenter">
+
+    <div id="storeResults" aria-role="grid">
+      <div id="storeLocationsListHeader" class="storeLocationListHeader">
+        <div id="sortByDiv" class="disabled">
+  <label for="sortBy">Sort By:</label>
+<select id="sortBy" disabled="">
+<option value="distance">Distance </option>
+<option selected ="selected" value="availability">  Availability</option>
+</select>
+</div>
+        <div id="locationEdit">
+          Centers with in 20km of"zipcode"
+          <a class="postalEdit ON" area-labelledby="findInCenterMsg" href="javascript:void()">Edit</a>
+        </div>
+          <h3 class="screenreader">Find in Centers Results</h3>
+          <div id="storeLocationsColumns" role="row">
+            <div class="resultsHead store jp" role="columnheader">
+            Center
+            </div>
+            <div class="resultsHead hours jp" role="columnheader">
+              Hours
+            </div>
+            <div class="resultsHead distance jp" role="columnheader">
+              Distance
+            </div>
+            <div id="availabilityHeader " class="resultsHead available" role="columnheader">  Availability</div>
+            </div>
+          </div>
+          <div id="storeLocationsList" class="storeLocationsList">
+            <div id="sizeAlertMessage" style="display:block;">
+              Sorry, We have no centers that fit your search criteria. Please edit your search above to try again.
+
+            </div>
+            <div id="storeLocationDirections" class="storeLocationDirections">
+            </div>
+          </div>
+              <div id="legalNotesMessages">
+                <span class="emphasize"> PLEASE NOTE: Product Location may not be accurate</span>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- short description:placeholder– Basically, this attribute shows a text in a field until the field is focused upon, then it just hides the text.
+    required– This specifies that the current element is a required part of a form submission.  -->
+
+
+    <div id="footer_grey">
+      <a href="home.html">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+    Donate and borrow books
+
+    </div>
+      </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/location.js"></script>
+</body>
+
+</html>

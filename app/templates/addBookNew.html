@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Add Donation Details</title>
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+
+</head>
+
+
+	<body>
+		<div class="navigationBar" id="navBar">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="addBorrowingDetails.html">Borrow A Book</a></li>
+				<li><a href="addDonationDetails.html" class="selected">Donate A Book</a></li>
+				<li><a href="showBooksInCentre.html">Inventory</a></li>
+				<li><a href="showCentre.html">My centre</a></li>
+				<li><a href="showCentres.html">All centres</a></li>
+			</ul>
+		</div>
+
+				<div id="donation_details" class ="isbn_number">
+	<form action= "{{url_for('addBookNew', centre_id = centre_id)}}" method = 'POST'>
+	<p>ISBN ID:</p>
+	<input type = 'text' size='30' name = 'book_id'>
+	<input type="submit" value="Submit">
+</br>
+</br>
+
+	<a style="color:orange;" href= '{{url_for('showBooksInCentre', centre_id=centre_id)}}'>Cancel</a>
+
+	</form>
+</div>
+	</body>
+	</html>

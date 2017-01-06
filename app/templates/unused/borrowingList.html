@@ -1,0 +1,24 @@
+<html>
+
+
+	<body>
+
+
+	<h1>{{centre.title}}</h1>
+
+	{% for borrowing in borrowings %}
+
+	<div>
+
+	<p>{{borrowing.borrowing_id}}</p>
+	<p> {{borrowing.book_id}} </p>
+	<p>{{borrowing.user_id}}</p>
+
+	</div>
+	 #can i include a link to serach borrowings by their book_id
+
+	{% endfor %}
+	</body>
+
+
+	</html>

@@ -1,0 +1,133 @@
+<!-- /user/signup -->
+<!DOCTYPE html>
+
+<head>
+
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+
+
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheetSignup.css') }}" />
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+
+  <!-- <div id="signupBar">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="user"></span> Sign Up</a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="log-in"></span> Login</a>
+      </li>
+    </ul>
+s
+
+  </div> -->
+
+  <div id="main">
+
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+      <div class="clear">
+
+      </div>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+    <div class="clear">
+
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="borrowLink">Borrow A Book</a></li>
+        <li><a href="donateLink">Donate A Book</a></li>
+        <li><a href="partnerorganisations">Partner with us</a></li>
+      </ul>
+    </div>
+    <div class="clear">
+
+    </div>
+
+    <div class="form">
+
+      <ul class="tab-group">
+        <li class="tab active"><a href="#login">Login</a></li>
+        <!-- <li class="tab"><a href="#login">Log In</a></li> -->
+      </ul>
+
+      <div>
+
+        <div id="login">
+          <h1>Welcome Back!</h1>
+
+          <form action="/" method="post">
+
+            <div class="field-wrap">
+              <label>
+                Email Address
+                <span class="req">*</span>
+              </label>
+              <input type="email" required autocomplete="off" />
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Password
+                <span class="req">*</span>
+              </label>
+              <input type="password" required autocomplete="off" />
+            </div>
+
+            <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+            <button class="button button-block">Log In</button>
+
+          </form>
+
+        </div>
+
+      </div>
+      <!-- tab-content -->
+
+    </div>
+    <div class="Thankyou_content" >
+        <p class="content">
+      Thank you for your support!<br>
+    Together We can help "Increase acess to Books for all" <br>
+      You have our admiration and gratitude.<br>
+      The log in page below is only for individual users who wants to donate or borrow books using Happy Booksgivings.<br>
+      Organisations (Ngos, private voluntary organisations, Schools, uiversity etc.) who wants to be part of Happy Booksgiving, please sign up <a href="signupCentre">here.</a>
+      Partner organisations click <a href="loginCentre">here </a> to login.
+</p>
+    </div>
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      Donate and borrow books
+
+    </div>
+  </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+
+</body>
+
+
+</html>

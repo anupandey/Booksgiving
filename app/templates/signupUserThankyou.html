@@ -1,0 +1,61 @@
+<!-- /user/signup/<str:user_id>/thankyou  -->
+
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheetSignup.css') }}" />
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+
+<div id ="thankyou_page">
+
+  <div id="main">
+
+    <div id="header">
+      <a href="home"><h1>Happy Booksgiving! </h1></a>
+      <div class="clear">
+
+      </div>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+    <div class= "clear">
+
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="borrowLink">Borrow A Book</a></li>
+        <li><a href="donateLink">Donate A Book</a></li>
+        <li><a href="partnerorganisations">Partner with us</a></li>
+      </ul>
+    </div>
+    <div class="thankyou">
+
+     Thank you for signing up with us.
+    </div>
+  </div>
+
+
+<div id="footer_yellow">
+  <a href="home">
+    <h1>Happy Booksgiving! </h1>
+  </a>
+</div>
+
+<div id="tag">
+  Donate and borrow books
+</div>
+</div>
+  <script type="text/javascript">
+setTimeout("window.location='{{url_for('loginUser')}}'",3000);
+</script>
+</body>
+</html>

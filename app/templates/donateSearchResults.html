@@ -1,0 +1,73 @@
+<!-- /donate/books/<search>/ -->
+<!DOCTYPE html>
+
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/donateabook.css') }}" />
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+
+
+
+  <div id="main">
+
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="borrowLink">Borrow A Book</a></li>
+        <li><a href="donateLink" class="selected">Donate A Book</a></li>
+        <li><a href="partnerorganisations">Partner with us</a></li>
+    </div>
+
+
+    <br>
+    <!-- short description:placeholder– Basically, this attribute shows a text in a field until the field is focused upon, then it just hides the text.
+    required– This specifies that the current element is a required part of a form submission.  -->
+    {% for searchBook in searchBooks %}
+    <div class="item_final">
+
+      <p> Book Title :{{searchBook.title}} </p>
+      <p> ISBN number: {{searchBook.book_id}} </p>
+      <p>Author: {{searchBook.author}} </p>
+      <p>Description: {{searchBook.description}} </p>
+      </br>
+      <p>
+        find near by centres
+      </p>
+      </br>
+      </br>
+
+    </div>
+    {% endfor %}
+
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      Donate and borrow books
+
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>

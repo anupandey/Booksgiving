@@ -1,0 +1,130 @@
+<!-- /donate/centres/ -->
+<!DOCTYPE html>
+
+
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link href="social-buttons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/donateabook.css">
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+
+  <div id="signup-header">
+    <!-- To make a beautiful society, All we need is beautiful people who are willing to act and particpate in the development of a country. Happy Thanksgiving helps you to Give , Lend or Share your books with the needy.     -->
+    <p>
+      <a href="signupUser.html" class="button">Sign Up to Donate Books  </a>
+    </p>
+  </div>
+
+  <!-- <body>
+    <div id="signupBar">
+      <ul>
+        <li>
+          <a href="signup.html">
+            <span class="user"></span> Sign Up | Login </a>
+        </li>
+        <!<li>
+          <a href="#">
+            <span class="log-in"></span> Login</a>
+        </li></ul> </div>-->
+
+
+  <div id="main">
+
+    <div id="header">
+      <a href="home.html">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="borrowLink.html" >Borrow A Book</a></li>
+        <li><a href="donateLink.html" class ="selected">Donate A Book</a></li>
+      <li><a href="partnerorganisations.html">Partner with us</a></li>
+    </div>
+
+<div class = "centre_details">
+<h1> Thank you for joining the battle against illiteracy. </br>
+  You can donate your book at one of these nearby located centres:</h1>
+<br>
+<ul class = "centres">
+  {% for available_centre in available_centres%}
+  <li>
+  <ul class = "centre">
+      <li>Name of centre :{{available_centre.name}}</li><br>
+      <li>Address :{{available_centre.address}}</li><br>
+      <li>Phone number :{{available_centre.phone}}</li><br>
+    </ul>
+  </li>
+  <br>
+  <br>
+
+
+<li>
+  <ul class = "centre">
+      <li>Name of centre :{{available_centre.name}}</li><br>
+      <li>Address :{{available_centre.address}}</li><br>
+      <li>Phone number :{{available_centre.phone}}</li><br>
+    </ul>
+  </li>
+<br>
+<br>
+
+<li>
+  <ul class = "centre">
+      <li>Name of centre :{{available_centre.name}}</li><br>
+      <li>Address :{{available_centre.address}}</li><br>
+      <li>Phone number :{{available_centre.phone}}</li><br>
+    </ul>
+</li>
+<br>
+<br>
+
+
+<li>
+  <ul class = "centre">
+      <li>Name of centre :{{available_centre.name}}</li><br>
+      <li>Address :{{available_centre.address}}</li><br>
+      <li>Phone number :{{available_centre.phone}}</li><br>
+    </ul>
+  </li>
+<br>
+<br>
+
+<li>
+  <ul class = "centre">
+      <li>Name of centre :{{available_centre.name}}</li><br>
+      <li>Address :{{available_centre.address}}</li><br>
+      <li>Phone number :{{available_centre.phone}}</li><br>
+    </ul>
+  </li>
+<br>
+<br>
+
+</ul>
+  </div>
+
+<div id="footer">
+  <a href="home.html">
+    <h1>Happy Booksgiving! </h1>
+  </a>
+<div id="tag">
+  Donate and borrow books
+
+</div>
+</div>
+
+
+</body>
+
+</html>

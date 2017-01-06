@@ -1,0 +1,24 @@
+<html>
+
+
+	<body>
+
+
+	<h1>{{centre.title}}</h1>
+
+	{% for donation in donations %}
+
+	<div>
+
+	<p>{{donation.donation_id}}</p>
+	<p> {{donation.book_id}} </p>
+	<p>{{donation.user_id}}</p>
+
+	</div>
+	 #can i include a link to serach donations by their book_id
+
+	{% endfor %}
+	</body>
+
+
+	</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<title>Edit your centre</title>
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+</head>
+
+<body>
+	<div id="grey_page">
+
+		<div class="navigationBar" id="navBar">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/addBorrowingDetails">Borrow A Book</a></li>
+				<li><a href="/addDonationDetails">Donate A Book</a></li>
+				<li><a href="/showBooksInCentre">Inventory</a></li>
+				<li><a href="/showCentre" class="selected">My center</a></li>
+			</ul>
+		</div>
+
+		<div id="centre_details">
+
+			<h2>  {{centre.name}} </h2>
+			<form action="{{url_for('editCentre', centre_id = centre_id)}}" method='POST'>
+
+				<fieldset>
+					<p>
+						<label for="phone">Phone number</label>
+					</p>
+					<p>
+						<input type='tel' size='30' name='phone' placeholder='{{centre.phone}}'> </p>
+
+					<p>
+						<label for="email_address">Email- Address</label>
+					</p>
+					<p>
+						<input type='email' size='30' name='email_address' placeholder='{{centre.email_address}}'>
+					</p>
+
+					<p>
+						<label for="contactname">Contact Name</label>
+					</p>
+					<p>
+						<input type='text' size='30' name='contactname' placeholder='{{centre.contactname}}'>
+					</p>
+
+					<p>
+						<label for="address">Address</label>
+					</p>
+					<p>
+						<input type='text' size='30' name='address' placeholder='{{centre.address}}' disabled> </p>
+					</br>
+					<p>
+						<input type='submit' value='Edit'> </p>
+					<a href='{{url_for('centreInfo', centre_id = centre.centre_id)}}'>Cancel</a>
+
+				</fieldset>
+				</br>
+				<p>
+					If you want to change your address, please drop a mail at help@hapybooksgiivng.com
+				</p>
+			</form>
+
+
+		</div>
+		<div id="footer">
+			<a href="home">
+				<h1>Happy Booksgiving! </h1>
+			</a>
+		</div>
+		<div id="tag">
+			You were born with the ability to change someone's life
+			<br>Don't WASTE it!
+		</div>
+
+	</div>
+	</div>
+</body>
+
+</html>

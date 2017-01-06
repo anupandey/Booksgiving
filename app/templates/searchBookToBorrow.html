@@ -1,0 +1,253 @@
+<!-- /borrow/books/search/ -->
+
+<!DOCTYPE html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/borrowingabook.css') }}" />
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+
+<body>
+
+  <div id="signup-header">
+    <!-- To make a beautiful society, All we need is beautiful people who are willing to act and particpate in the development of a country. Happy Thanksgiving helps you to Give , Lend or Share your books with the needy.     -->
+    <p>
+      <a href="signup." class="button">Sign Up to Borrow a Book  </a>
+    </p>
+  </div>
+
+  <!-- <body>
+    <div id="signupBar">
+      <ul>
+        <li>
+          <a href="signup.">
+            <span class="user"></span> Sign Up | Login </a>
+        </li>
+        <!<li>
+          <a href="#">
+            <span class="log-in"></span> Login</a>
+        </li></ul> </div>-->
+
+
+  <div id="main">
+
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/borrowLink" class="selected">Borrow A Book</a></li>
+        <li><a href="/donateLink">Donate A Book</a></li>
+        <li><a href="/partnerorganisations">Partner with us</a></li>ns</a></li>
+      </ul>
+    </div>
+
+    <div class="searchbar">
+    <h2> Borrow A Book</h2>
+      <form class="form-wrapper cf" action = "" method = "POST">
+        <input type="text" placeholder="Enter your Book ISBN ID Here" name = "text" required></br>
+        <button type="submit" name = "book-search-borrow-form" value = "Send">Search</button>
+      </form>
+      <!-- short description:placeholder– Basically, this attribute shows a text in a field until the field is focused upon, then it just hides the text
+    required– This specifies that the current element is a required part of a form submission  -->
+    </div>
+<div class ="seen">
+
+    <!-- <h2> Last Seen</h2>
+
+    <div class="last-seen">
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+
+        <button class="item-buttons borrow-button"> Borrow</button>
+        <button class="item-buttons donate-button"> Donate</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div> -->
+
+
+      <!-- <div class="item">
+        <div class="item-details">
+          <p class="BookName"> <b>Book name to be added here</b>  </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons borrow-button"> Borrow</button>
+        <button class="item-buttons donate-button"> Donate</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+
+        <button class="item-buttons borrow-button"> Borrow</button>
+        <button class="item-buttons donate-button"> Donate</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"> <b>Book name to be added here</b>  </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons borrow-button"> Borrow</button>
+        <button class="item-buttons donate-button"> Donate</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"> <b>Book name to be added here</b>  </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons borrow-button"> Borrow</button>
+        <button class="item-buttons donate-button"> Donate</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+    </div>
+</div> -->
+
+<div class ="seen">
+<h2> Borrowed by you (No.?)</h2>
+    <div class="last-borrowed">
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons donate-button"> Return</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+
+      <!-- <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons donate-button"> Return</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+ -->
+
+
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons donate-button"> Return</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons donate-button"> Return</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+
+      <div class="item">
+        <div class="item-details">
+          <p class="BookName"><b>Book name to be added here</b>    </p>
+        <p class=AuthorName>
+          Author Name to be added
+        </p>
+        <p class="ISBN_number">
+          Isbn Number to come here
+        </p>
+      </div>
+        <button class="item-buttons donate-button"> Return</button>
+        <button class=" item-discuss">Discuss Book</button>
+      </div>
+
+    </div>
+
+
+    <div class="notify">
+      <h1> Can't find yor Book?</h1>
+      <p>
+        Sign up to be notified when this book is available </p>
+      <form class="form-wrapper cf">
+        <input type="text" value="" required="" placeholder="Enter your Email Here..."> </input>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+  </div>
+  <div id="tag">
+    Donate and borrow books
+
+  </div>
+  </div>
+</body>
+
+</html>

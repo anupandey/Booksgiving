@@ -1,0 +1,433 @@
+body {
+   background-color:#312c23;
+  color: #FFEF00;
+}
+
+.selected {
+  backound-color: lemonchiffon;
+  color: #FFEF00;
+  border-radius: 5px;
+}
+.navigationBar li .selected {
+  border-radius: 5px;
+  padding:5px;
+  color:white;
+  background-color: #7a6f59;
+}
+#header {
+  font-family: Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 20px;
+  padding-top: 10px;
+  text-align: left;
+  color: #FFEF00;
+  margin-left: 120px;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#header p {
+  font-size: 16px;
+  color: #fcf5eb;
+  font-weight: 700;
+  letter-spacing: 1pX;
+}
+#header h1{
+  font: 400 50px/0.8 'Great Vibes', Helvetica, sans-serif;
+text-shadow: 4px 4px 3px rgba(255,255,204,.5);
+color:#FFEF00;
+}
+#header h1:hover{
+  color: lemonchiffon;
+}
+.navigationBar{
+  background-color: #FFE135;
+  padding: 2px 0px;
+   position:relative;
+}
+.navigationBar ul {
+  background-color: #FFE135;
+  padding: 14px 0px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: verdana;
+}
+.navigationBar li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-left: solid black 2px;
+  position: relative;
+}
+.navigationBar li a {
+  color: Black;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  /*background-color: #FFF23B;*/
+  text-transform: uppercase;
+}
+.navigationBar li a:hover{
+  background-color: #7a6f59;
+  color:#fff;
+  border-radius: 5px;
+  padding:5px;
+}
+#signupBar {
+  margin-right: 50px;
+  float: right;
+  margin-top: 10px;
+}
+
+#signupBar li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 10px;
+  margin-top: 0px;
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  border: 2px solid #FFE135;
+}
+#signupBar li a {
+  text-decoration: none;
+  color: #FFE135;
+  font-size: 15px;
+  /*margin:-10px;*/
+}
+
+#signupBar li a:hover {
+  background-color: lemonchiffon;
+  color: black;
+  font-weight: 500;
+}
+
+.searchbar{
+  border:5px double #ffe23b;
+  margin:50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+.cf:before, .cf:after{
+    content:"";
+    display:table;
+}
+
+.cf:after{
+    clear:both;
+}
+
+.cf{
+    zoom:1;
+}
+
+
+
+/* Form wrapper styling */
+.form-wrapper {
+    width: 450px;
+    padding: 20px;
+    margin: 0px auto 50px auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    color:black;
+}
+
+/* Form text input */
+
+.form-wrapper input
+{
+    width: 330px;
+    height: 20px;
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    font-style: italic;
+
+}
+
+.form-wrapper input:focus,
+ {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.form-wrapper input::-webkit-input-placeholder
+  {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Form submit button */
+.form-wrapper button{
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px verdana;
+    color: black;
+    text-transform: uppercase;
+    background: #ffe23b;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+
+.form-wrapper button:hover
+{
+    background: #7a6f59;
+    color:white;
+}
+
+.form-wrapper button:active,
+.form-wrapper button:focus{
+    background: #7a6f59;
+	outline: 0;
+}
+
+.form-wrapper button:before
+{ /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #ffe23b transparent;
+    top: 12px;
+    left: -6px;
+}
+
+.form-wrapper button:hover:before
+{
+    border-right-color: #7a6f59;
+}
+
+.form-wrapper button:focus:before,
+.form-wrapper button:active:before
+{        border-right-color:#7a6f59;
+}
+
+.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}
+
+.notify .form-wrapper{
+  padding: 0px;
+}
+
+.button{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3.2px;
+  line-height: 24px;
+  color: #FFF23B;
+  margin:5px auto 10px;
+  text-transform: uppercase;
+  border: 3px solid;
+  padding:10px;
+  display: inline-block;
+  float:right;
+}
+
+#signup-header a:hover {
+  color:  lemonchiffon;
+  text-decoration: none;
+}
+ .notify {
+   text-decoration: none;
+   font-size: 12px;
+   font-weight: 700;
+   letter-spacing: 3px;
+   line-height: 15px;
+   color: #FFF23B;
+   margin: auto;
+   margin-top: 100px;
+    width: 60%;
+    border: 5px solid #ffe23b;
+    padding:5px 10px 5px 10px;
+}
+
+ .notify h1{
+   color:#ffe23b;
+   font-family: 'Arvo', serif;
+   font-size: 30px;
+   font-weight: 700;
+   text-transform: uppercase;
+ }
+
+h2{
+ color: #FFEF00;
+ font-family: 'Arvo', serif;
+ font-size: 30px;
+ font-weight: 700;
+ line-height: 48px;
+ margin: auto;
+ max-width: 960px;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 50px;
+ text-align: center;
+ text-transform: uppercase;
+ width: 960px;
+ letter-spacing: 2px;
+ word-spacing: 10px;
+}
+
+/*last seen*/
+.seen{margin-top: 100px;
+margin-bottom: 100px;
+margin: 50px;}
+
+.last-seen ,
+.last-borrowed {
+    text-align: center;
+    margin:5px;
+    /*border:5px double #ffe23b;*/
+    padding:15px;
+  }
+
+.item {
+   font-family: 'Arvo', serif;
+  color: #383838 ;
+  display:inline-block;
+    font-size: 1em;
+    height: 202px;
+    margin:10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 202px;
+    border :5px solid #ffe23b;
+     /*box-shadow: 2px 4px 8px 2px #FAEDDB;*/
+    /*box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);*/
+    color:black;
+    background: #fff none repeat scroll 0% 0%;
+    line-height: 1.2em;
+  }
+
+  .item-details {
+   font-family: 'Arvo', serif;
+    overflow: hidden;
+    font-size: 5x;
+    float: left;
+    width: 180px;
+    height: auto;
+    text-align: left;
+  }
+
+
+  .item-buttons {
+      display:inline-block;
+      padding: 2px;
+      width: 60px;
+      text-align: center;
+      height: 30px;
+      font-size:.92em;
+      font-weight: bold;
+      margin-bottom:5px;
+      margin-right: 2px;
+      border:1px solid white;
+    }
+
+.borrow-button{
+  background: grey;
+  -webkit-border-radius: 12;
+  -moz-border-radius: 12;
+  border-radius: 12px;
+   font-family: 'Arvo', serif;
+  color: #ffffff;
+    font-size:.9em;
+}
+
+.donate-button{
+  background:  #282828;
+ -webkit-border-radius: 12;
+ -moz-border-radius: 12;
+ border-radius: 12px;
+  font-family: 'Arvo', serif;
+ color: white;
+   font-size:.92em;
+ text-decoration: none;
+}
+
+  .borrow-button:hover ,
+  .donate-button:hover{
+      background: #ffe23b;
+      color:black;
+
+  }
+
+  .item-discuss{
+      background:#6C7B8B;
+      -webkit-border-radius: 12;
+      -moz-border-radius: 12;
+      border-radius: 12px;
+       font-family: 'Arvo', serif;
+      color: #fff;
+      padding: 5px;
+        font-size:.92em;
+      text-decoration: none;
+      text-align:center;
+    }
+
+    .item-discuss:hover {
+        background-color: #ffe23b;
+        color:black;
+        font-weight: bolder;
+}
+
+#footer{
+  font: 400 50px/0.8 'Great Vibes', Helvetica, sans-serif;
+text-decoration: none;
+text-align: center;
+padding-top:10px;
+}
+#tag{
+  font: 25px 'Great Vibes', Helvetica, sans-serif;
+text-shadow: 4px 4px 3px rgba(GREY,.5);
+text-decoration: none;
+text-align: center;
+padding: 0px;
+margin-top: -10px;
+color:#FAEDDB;
+}
+#footer a{
+  text-decoration: none;
+  color:#FFEF00;
+}
+#footer a:hover{
+ color:lemonchiffon;
+}
+
+.BookName{
+  font-size: 1.em;
+}
+/*Header buttons and forms*/

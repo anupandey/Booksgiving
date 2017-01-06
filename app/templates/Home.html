@@ -1,0 +1,83 @@
+<!-- /home -->
+<!DOCTYPE html>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}" />
+  <title>
+    Happy Booksgiving!
+  </title>
+</head>
+
+<body>
+  <div id="signupBar" class="signup_button">
+    <ul>
+      <li>
+        <a href="signupUser">
+          <span class="user"></span> Sign Up | Login </a>
+      </li>
+      <li>
+        <a href = "{{url_for('newCentre')}}"
+          <span class="user"> </span> Partner Login </a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="main">
+
+    <div id="header">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1></a>
+      <p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+    </div>
+    <div class="navigationBar" id="navBar">
+      <ul>
+        <li><a href="home" class="selected">Home</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="borrowLink">Borrow A Book</a></li>
+        <li><a href="donateLink">Donate A Book</a></li>
+        <li><a href="partnerorganisations">Partner with us</a></li>
+      </ul>
+    </div>
+
+    <div id="intro">
+      <h1>
+        "A book lying idle on a shelf is wasted ammunition"
+      </h1>
+
+      <p style="font-size:15px" , "text-align: right";>
+        - Henry Miller, The Books in My Life
+      </p>
+
+      <p>
+        Happy Booksgivings! is all about Sharing the joy of reading & knowledge with those less fortunate.
+        <br>
+        <u>Books you once used and no longer need can help others.</u> We need help of beautiful people like you to put books into the hands of children who need them.
+      </p>
+      <a href="about" class="button"> See How We Work </a>
+
+      <div class="clear">
+      </div>
+
+    </div>
+
+    <div id="footer_new">
+      <!-- To make a beautiful society, All we need is beautiful people who are willing to act and particpate in the development of a country. Happy Thanksgiving helps you to Give , Lend or Share your books with the needy.     -->
+      <p>
+        <a href="signupUser" class="button">Sign up with Happy Books Giving!  </a> to Borrow/Donate Books!
+      </p>
+    </div>
+    <div id="footer">
+      <a href="home">
+        <h1>Happy Booksgiving! </h1>
+      </a>
+    </div>
+    <div id="tag">
+      Donate and borrow books
+    </div>
+  </div>
+</body>
+
+</html>

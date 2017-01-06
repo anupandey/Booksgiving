@@ -1,0 +1,162 @@
+<!-- /centre/<string:centre_id>/borrowing_details -->
+<!doctype html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Add Borrowing Details</title>
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+
+
+
+
+</head>
+
+<body>
+
+	<div id="maindiv">
+		<!-- <div id="header">
+<a href="home.html"> <h1>Happy Booksgiving! </h1></a>
+		<p id="color"> You were born with the ability to change someone's life - Don't WASTE it! </p>
+
+	</div> -->
+		<div class="navigationBar" id="navBar">
+			<ul>
+				<li><a href="home.html" >Home</a></li>
+				<li><a href="addBorrowingDetails.html" class="selected">Borrow A Book</a></li>
+				<li><a href="addDonationDetails.html">Donate A Book</a></li>
+				<li><a href="showBooksInCentre.html">Inventory</a></li>
+					<li><a href="showCentre.html">My centre</a></li>
+					<li><a href="showCentres.html" >All centres</a></li>
+			</ul>
+		</div>
+
+
+		<div id="borrow_details">
+
+			<h2> Details of borrowing</h2>
+
+			<form action="javascript:void(0;" method="POST">
+				<fieldset>
+					<p>
+						<label for="date">Date</label>
+					</p>
+					<p>
+						<input type="date" name="date" id="date" required>
+					</p>
+				</fieldset>
+
+					<fieldset>
+					<legend>Book Details
+					</legend>
+					<p>
+						<label for="isbn">ISBN No.</label>
+					</p>
+					<p>
+						<input type="text" id="isbn" name="book_id" value="" onBlur="if(this.value=='')this.value='Please Enter the ISBN No. of Donated Book Here'" onFocus="if(this.value=='Please Enter the ISBN No. of Donated Book Here')this.value=''" required>
+					</p>
+					<p>
+						<label for="booktitle">Title of Book</label>
+					</p>
+
+					<p>
+						<input type="text" id="booktitle" name="title" value="" onBlur="if(this.value=='')this.value='Enter Book Title Here'" onFocus="if(this.value=='Enter Book Title Here')this.value=''" required>
+					</p>
+					<p>
+						<label for="author">Author</label>
+					</p>
+
+					<p>
+						<input type="text" id="author" name="author" value="" onBlur="if(this.value=='')this.value='Enter the name of the Author'" onFocus="if(this.value=='Enter the name of the Author')this.value=''" required>
+					</p>
+					<p>
+						<label for="description">Description</label>
+					</p>
+
+					<p>
+						<input type="text" id="description" name="description" value="">
+					</p>
+
+					<p>
+						<label for="number">Number</label>
+					</p>
+
+					<p>
+						<input type="text" id="number" name="number" value="" onBlur="if(this.value=='')this.value='Enter Number of Books'" onFocus="if(this.value=='Enter Number of Books')this.value=''" required>
+					</p>
+
+
+						</fieldset>
+
+					<fieldset>
+						<legend>
+							Details of Borrower
+						</legend>
+					<p>
+						<label for="donorname"> Name</label>
+					</p>
+					<p>
+						<input type="text" name="donorname" id="donorname" value="" onBlur="if(this.value=='')this.value='Enter Donor Name Here'" onFocus="if(this.value=='Enter Donor Name Here')this.value=''" required>
+					</p>
+					<p>
+						<p>
+							<label for="email">E-mail address</label>
+						</p>
+						<p>
+							<input type="email" id="email" name="email-address" placeholder="mail@address.com" required>
+						</p>
+				<p>
+					<p>
+						<label for="postcode">Pin code</label>
+					</p>
+					<p>
+						<input id="postcode" name="postcode" type="text" required>
+					</p>
+						<label for="phone">Phone</label>
+
+					<p>
+						<input id="phone" name="phone" type="tel" placeholder="Eg. 01122116269" required >
+					</p>
+
+					<p>
+						<label for="address">Address </label>
+					</p>
+					<p>
+						<textarea id="address" name="address" rows="5" placeholder="Please Enter Borrowers Details Here" required=""></textarea>
+					</p>
+					<p>
+						<label for="username">Booksgiving User Name</label>
+					</p>
+					<p>
+						<input type="text" id="username" name="username" value="" placeholder="If available">
+					</p>
+
+					<p>
+						<input type="submit" value="Sign In">
+					</p>
+
+				</fieldset>
+			</form>
+
+			<div id="footer">
+				<a href="home.html">
+					<h1>Happy Booksgiving! </h1>
+				</a>
+			</div>
+			<div id="tag">
+				You were born with the ability to change someone's life
+				<br>Don't WASTE it!
+			</div>
+
+		</div>
+</div>
+
+</body>
+
+</html>

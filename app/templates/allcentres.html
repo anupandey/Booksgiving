@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<title>All centres</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ngosignup_stylesheet.css') }}" />
+	  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}" />
+</head>
+
+<body>
+
+
+	<div id="grey_page">
+
+		<div class="navigationBar" id="navBar">
+			<ul>
+				<li><a href = "{{url_for('homePage') }}">Home</a></li>
+				<li><a href = "{{url_for('about') }}">About</a></li>
+				<li><a href="borrowLink">Borrow A Book</a></li>
+				<li><a href="donateLink">Donate A Book</a></li>
+				<li><a href="partnerorganisations">Partner with us</a></li>
+			</ul>
+		</div>
+
+		<div id = "flash_messages" >
+		{% with messages = get_flashed_messages()%}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+			<li> <strong> {{message}}</strong></li>
+			{% endfor%}
+		</ul>
+		{% endif %}
+		{% endwith %}
+
+		</div>
+
+		<div class = "outline">
+		{% for centre in centres %}
+
+		<div class  = "allcentres">
+	<h1>{{centre.name}}</h1>
+
+			<p> <img src= "{{ url_for('static', filename='images/contact.png') }}"/>{{centre.contactname}}</p>
+			<p> <img src= "{{ url_for('static', filename='images/phone.png') }}"/><a href="tel:{{centre.phone}}"> {{centre.phone}} </a> </p>
+			<p> <img src= "{{ url_for('static', filename='images/email.png') }}"/> <a href="mailto:{{centre.email_address}}"> {{centre.email_address}}</a></p>
+			<p><img src= "{{ url_for('static', filename='images/address.png') }}"/>{{centre.address}}, Pincode - {{centre.pincode}}	</p>
+
+</br>
+	</div>
+
+			{% endfor %}
+				</div>
+
+		<div id="footer">
+			<a href="home">
+				<h1>Happy Booksgiving! </h1>
+			</a>
+		</div>
+		<div id="tag">
+			You were born with the ability to change someone's life
+			<br>Don't WASTE it!
+		</div>
+
+</div>
+</body>
+
+</html>
